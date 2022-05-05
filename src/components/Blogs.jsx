@@ -3,36 +3,36 @@ import styled from "styled-components";
 import blog1 from "../assets/blog1.jfif";
 import blog2 from "../assets/blog2.png";
 import blog3 from "../assets/blog3.png";
-// import blog3 from "../assets/blog1.jfif";
 
-export default function Blogs(){
+export default function Blogs() {
     const images = [blog1, blog2, blog3];
-
-    return(
-        <Section id={"blogs"}>
-            <div className={"title"}>
+    return (
+        <Section id="blogs">
+            <div className="title">
                 <h2>News & Feeds</h2>
-                <h5>Where you can find a good health.</h5>
+                <h5>Where you can earn crypto</h5>
             </div>
-            <div className={"blogs"}>
+            <div className="blogs">
                 {images.map((img, index) => {
-                    return(
-                        <div className={"blog"} key={index}>
-                            {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
-                            <img src={img} alt={"Blog Image"} />
-                            <div className={"data"}>
-                                <h6> 31, January, 2021</h6>
-                                <h4> Innovastra is a solution software company</h4>
-                                <p> Innovastra is here to stay </p>
+                    return (
+                        <div className="blog" key={index}>
+                            <img src={img} alt="Blog Image" />
+                            <div className="data">
+                                <h6>31 Jan, 2021</h6>
+                                <h4>Rightmove Now Offering Click to Purchase Option</h4>
+                                <p>
+                                    Rightmove is now offering an option that enables buyers of
+                                    selected commercial properties the option to submit offers and
+                                    digitally exchange contracts online.
+                                </p>
                             </div>
                         </div>
                     );
                 })}
             </div>
         </Section>
-    )
+    );
 }
-
 
 const Section = styled.section`
   margin: 4rem 10rem;
@@ -40,19 +40,16 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  
-  .title{
+  .title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
   }
-  
-  .blogs{
+  .blogs {
     display: flex;
     gap: 5rem;
-    
-    .blog{
+    .blog {
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -60,42 +57,35 @@ const Section = styled.section`
       background-color: rgba(0, 0, 0, 0.3);
       border-bottom: 0.5rem transparent solid;
       transition: 0.3s ease-in-out;
-      
-      &:hover{
+      &:hover {
         border-color: var(--primary-color);
       }
-      
-      img{
+      img {
         width: 99%;
       }
-      
-      .data{
+      .data {
         padding: 1rem;
         gap: 1rem;
         display: flex;
         flex-direction: column;
-        
-        p{
+        p {
           font-size: 0.9rem;
           font-weight: 100;
         }
       }
     }
   }
-  
-  @media screen and (min-width: 280px) and (max-width: 1080px){
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
     margin: 2rem 1rem;
-    
-    .title{
-      h2{
+    .title {
+      h2 {
         font-size: 2.4rem;
         color: var(--primary-color);
       }
     }
-    
-    .blogs{
+    .blogs {
       flex-direction: column;
       gap: 2rem;
     }
   }
-`
+`;
