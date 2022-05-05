@@ -1,11 +1,14 @@
+import Designs from "./components/Designs"
+// import Button from "./components/Button";
 
 
-function App() {
+
+
+export default function App() {
   return (
    <div>
-     <p>Hello world</p>
+     <Designs/>
+       {/*<Button />*/}
    </div>
   );
 }
-
-export default App;
